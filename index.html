@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Congo Travel Companion - Plan and reserve your trips around the world with insights and guides for Congo Brazzaville." />
+  <meta name="keywords" content="Congo Brazzaville, travel, flights, reservations, weather, hotels, restaurants, tourist destinations" />
+  <meta name="author" content="Congo Travel Companion Team" />
+  <title>Congo Travel Companion</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Congo Travel Companion</h1>
+      <nav>
+        <ul>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#planner">Trip Planner</a></li>
+          <li><a href="#hotels">Hotels & Restaurants</a></li>
+          <li><a href="#weather">Weather</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero-text">
+        <h2>Explore Congo Brazzaville and Beyond</h2>
+        <p>Plan your perfect journey and book flights around the world with confidence.</p>
+        <button onclick="bookFlight()">Book Your Flight</button>
+      </div>
+    </section>
+
+    <section id="destinations">
+      <h2>Top Destinations</h2>
+      <div id="destinations-list" class="grid"></div>
+    </section>
+
+    <section id="planner">
+      <h2>Trip Planner</h2>
+      <form id="tripForm">
+        <input type="text" placeholder="Departure City" required />
+        <input type="text" placeholder="Destination City" required />
+        <button type="submit">Search Flights</button>
+      </form>
+    </section>
+
+    <section id="hotels">
+      <h2>Hotels & Restaurants</h2>
+      <div id="hotel-list" class="grid"></div>
+    </section>
+
+    <section id="weather">
+      <h2>Real-time Weather</h2>
+      <div id="weather-info">Loading weather...</div>
+    </section>
+
+    <section id="reviews">
+      <h2>User Reviews</h2>
+      <div id="reviews-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Congo Travel Companion. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

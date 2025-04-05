@@ -1,0 +1,56 @@
+{
+  "destinations": [
+    {
+      "name": "Basilique Sainte-Anne",
+      "description": "Une magnifique basilique située à Brazzaville, célèbre pour son architecture unique.",
+      "image": "images/noe1.jpg"
+    },
+    {
+      "name": "Chutes de Loufoulakari",
+      "description": "Des chutes d'eau spectaculaires, parfaites pour une escapade nature en dehors de la ville.",
+      "image": "images/Loufoulakari1.jpg"
+    },
+    {
+      "name": "Les Rapides du Congo",
+      "description": "Un point de vue impressionnant sur le fleuve Congo avec des rapides puissants.",
+      "image": "images/noe2.jpg"
+    }
+  ],
+  "hotels": [
+    {
+      "name": "Mikhael's Hotel",
+      "type": "Hôtel 4 étoiles",
+      "city": "Brazzaville",
+      "image": "images/residence1.jpg"
+    },
+    {
+      "name": "La Mandarine",
+      "type": "Restaurant Gastronomique",
+      "city": "Brazzaville",
+      "image": "images/th.jpg"
+    },
+    {
+      "name": "Résidence Saint-Jacques",
+      "type": "Hôtel de charme",
+      "city": "Brazzaville",
+      "image": "images/caption.jpg"
+    }
+  ],
+  "reviews": [
+    {
+      "user": "Alice",
+      "rating": 5,
+      "comment": "Incroyable expérience à la Basilique. Le guide était super !"
+    },
+    {
+      "user": "Jean",
+      "rating": 4,
+      "comment": "Les chutes de Loufoulakari sont magnifiques, mais difficiles d'accès."
+    },
+    {
+      "user": "Fatou",
+      "rating": 5,
+      "comment": "J'ai adoré Mikhael’s Hotel, très propre et bien situé."
+    }
+  ]
+}

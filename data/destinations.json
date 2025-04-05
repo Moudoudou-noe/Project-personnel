@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Pointe Noire",
+        "description": "La ville portuaire de Pointe-Noire, avec ses plages et son marché.",
+        "image": "destination1.jpg"
+    },
+    {
+        "name": "Brazzaville",
+        "description": "La capitale de la République du Congo, pleine de culture et d'histoire.",
+        "image": "destination2.jpg"
+    }
+]

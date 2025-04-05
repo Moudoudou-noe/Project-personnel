@@ -1,0 +1,256 @@
+/* styles.css */
+
+:root {
+    --primary-color: #2e445a;
+    --secondary-color: #3498db;
+    --light-bg: #f4f4f4;
+    --text-dark: #2c2c2c;
+    --text-light: #fff;
+    --accent-color: #e67e22;
+    --font-main: 'Segoe UI', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 0;
+  }
+  
+  header h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--accent-color);
+  }
+  
+  #hero {
+    background-image: url('images/explore.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-text button {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .hero-text button:hover {
+    background-color: #d35400;
+  }
+  /* Section météo */
+#weather {
+    background: linear-gradient(to right, #00796b, #004d40); 
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #weather h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  #weather-info {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    max-width: 600px;
+    margin: auto;
+    transition: all 0.3s ease;
+  }
+  
+  #weather-info:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+  }
+  
+  section {
+    padding: 3rem 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 1rem;
+  }
+  /* Reviews Section Styling */
+#reviews {
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #reviews h2 {
+    font-size: 2.8rem;
+    color: #004d40;
+    margin-bottom: 40px;
+    font-family: 'Georgia', serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Container for all reviews dynamically added */
+  #reviews-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Individual review card */
+  #reviews-list .review {
+    background-color: #ffffff;
+    border-left: 6px solid #00796b;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* Smooth entry animation */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive layout for larger screens */
+  @media (min-width: 768px) {
+    #reviews-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #reviews-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  form input,
+  form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #2980b9;
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 768px) {
+    body {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    body {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
