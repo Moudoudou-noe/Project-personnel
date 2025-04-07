@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tableau de Moyennes Scolaires</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 95%;
+      max-width: 1000px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      color: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #0d47a1;
+      color: white;
+    }
+
+    input {
+      padding: 8px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      width: 150px;
+    }
+
+    .input-notes {
+      width: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #00c853;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #009624;
+    }
+
+    .delete-btn {
+      background-color: #c62828;
+    }
+
+    .delete-btn:hover {
+      background-color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧮 Tableau de Moyennes Scolaires</h1>
+
+  <div>
+    <input type="text" id="nom" placeholder="Nom de l'élève">
+    <input type="number" id="math" placeholder="Math" class="input-notes" min="0" max="20">
+    <input type="number" id="physique" placeholder="Physique" class="input-notes" min="0" max="20">
+    <input type="number" id="anglais" placeholder="Anglais" class="input-notes" min="0" max="20">
+    <input type="number" id="francais" placeholder="Français" class="input-notes" min="0" max="20">
+    <input type="number" id="histoire" placeholder="Histoire-Géo" class="input-notes" min="0" max="20">
+    <input type="number" id="eps" placeholder="EPS" class="input-notes" min="0" max="20">
+    <br>
+    <button onclick="ajouterEtudiant()">Ajouter Élève</button>
+  </div>
+
+  <table id="tableau">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Math</th>
+        <th>Physique</th>
+        <th>Anglais</th>
+        <th>Français</th>
+        <th>Histoire</th>
+        <th>EPS</th>
+        <th>Moyenne</th>
+        <th>Mention</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="corpsTableau">
+      <!-- lignes ajoutées dynamiquement -->
+    </tbody>
+  </table>
+
+  <script>
+    function ajouterEtudiant() {
+      const nom = document.getElementById("nom").value;
+      const math = parseFloat(document.getElementById("math").value);
+      const physique = parseFloat(document.getElementById("physique").value);
+      const anglais = parseFloat(document.getElementById("anglais").value);
+      const francais = parseFloat(document.getElementById("francais").value);
+      const histoire = parseFloat(document.getElementById("histoire").value);
+      const eps = parseFloat(document.getElementById("eps").value);
+
+      // Vérifier que tout est rempli
+      if (!nom || [math, physique, anglais, francais, histoire, eps].some(isNaN)) {
+        alert("Veuillez remplir tous les champs correctement !");
+        return;
+      }
+
+      const moyenne = calculerMoyenne([math, physique, anglais, francais, histoire, eps]);
+      const mention = donnerMention(moyenne);
+
+      const ligne = document.createElement("tr");
+      ligne.innerHTML = `
+        <td>${nom}</td>
+        <td>${math}</td>
+        <td>${physique}</td>
+        <td>${anglais}</td>
+        <td>${francais}</td>
+        <td>${histoire}</td>
+        <td>${eps}</td>
+        <td>${moyenne.toFixed(2)}</td>
+        <td>${mention}</td>
+        <td><button class="delete-btn" onclick="supprimerLigne(this)">Supprimer</button></td>
+      `;
+
+      document.getElementById("corpsTableau").appendChild(ligne);
+      resetFormulaire();
+    }
+
+    function calculerMoyenne(notes) {
+      const total = notes.reduce((acc, val) => acc + val, 0);
+      return total / notes.length;
+    }
+
+    function donnerMention(moyenne) {
+      if (moyenne >= 16) return "Très Bien";
+      if (moyenne >= 14) return "Bien";
+      if (moyenne >= 12) return "Assez Bien";
+      if (moyenne >= 10) return "Passable";
+      return "Insuffisant";
+    }
+
+    function supprimerLigne(bouton) {
+      const ligne = bouton.closest("tr");
+      ligne.remove();
+    }
+
+    function resetFormulaire() {
+      document.getElementById("nom").value = "";
+      document.getElementById("math").value = "";
+      document.getElementById("physique").value = "";
+      document.getElementById("anglais").value = "";
+      document.getElementById("francais").value = "";
+      document.getElementById("histoire").value = "";
+      document.getElementById("eps").value = "";
+    }
+  </script>
+
+</body>
+</html>

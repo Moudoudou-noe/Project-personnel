@@ -59,7 +59,20 @@
   nav a:hover {
     color: var(--accent-color);
   }
-  
+  .finale{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    color: var(--accent-color);
+
+  }
+  .okk{
+    color: var(--secondary-color);
+  }
+  .noe{
+    color:var(--light-bg);
+    text-decoration: none;
+  }
   #hero {
     background-image: url('images/explore.jpg');
     background-size: cover;

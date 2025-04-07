@@ -1,25 +1,25 @@
 {
   "destinations": [
     {
-      "name": "Basilique Sainte-Anne",
-      "description": "Une magnifique basilique située à Brazzaville, célèbre pour son architecture unique.",
+      "name": "Basilica of Saint Anne",
+      "description": "A magnificent basilica located in Brazzaville, famous for its unique architecture.",
       "image": "images/noe1.jpg"
     },
     {
-      "name": "Chutes de Loufoulakari",
-      "description": "Des chutes d'eau spectaculaires, parfaites pour une escapade nature en dehors de la ville.",
+      "name": "Loufoulakari Falls",
+      "description": "Spectacular waterfalls, perfect for a nature getaway outside the city.",
       "image": "images/Loufoulakari1.jpg"
     },
     {
-      "name": "Les Rapides du Congo",
-      "description": "Un point de vue impressionnant sur le fleuve Congo avec des rapides puissants.",
+      "name": "The Congo Rapids",
+      "description": "An impressive view of the Congo River with powerful rapids.",
       "image": "images/noe2.jpg"
     }
   ],
   "hotels": [
     {
       "name": "Mikhael's Hotel",
-      "type": "Hôtel 4 étoiles",
+      "type": "4-star hotel",
       "city": "Brazzaville",
       "image": "images/residence1.jpg"
     },
@@ -30,8 +30,8 @@
       "image": "images/th.jpg"
     },
     {
-      "name": "Résidence Saint-Jacques",
-      "type": "Hôtel de charme",
+      "name": "Saint-Jacques Residence",
+      "type": "Charming hotel",
       "city": "Brazzaville",
       "image": "images/caption.jpg"
     }
@@ -40,17 +40,17 @@
     {
       "user": "Alice",
       "rating": 5,
-      "comment": "Incroyable expérience à la Basilique. Le guide était super !"
+      "comment": "Amazing experience at the Basilica. The guide was great!"
     },
     {
       "user": "Jean",
       "rating": 4,
-      "comment": "Les chutes de Loufoulakari sont magnifiques, mais difficiles d'accès."
+      "comment": "The Loufoulakari Falls are magnificent, but difficult to access."
     },
     {
       "user": "Fatou",
       "rating": 5,
-      "comment": "J'ai adoré Mikhael’s Hotel, très propre et bien situé."
+      "comment": "I loved Mikhael’s Hotel, very clean and well located."
     }
   ]
 }
